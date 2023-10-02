@@ -49,9 +49,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e38-So-eAg">
-                                <rect key="frame" x="196.66666666666666" y="421" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e38-So-eAg">
+                                <rect key="frame" x="20" y="421" width="353" height="31.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -114,12 +114,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M4P-Ch-Gh8" secondAttribute="trailing" constant="20" id="0ws-px-Fbg"/>
                             <constraint firstItem="21a-33-wsC" firstAttribute="top" secondItem="ZCJ-Ga-T4e" secondAttribute="bottom" constant="8" id="59O-WT-0qa"/>
                             <constraint firstItem="BXS-X4-0xC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Eeg-hj-R7g"/>
-                            <constraint firstItem="e38-So-eAg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PDz-FY-kJx"/>
-                            <constraint firstItem="EBN-a4-qPm" firstAttribute="top" secondItem="M4P-Ch-Gh8" secondAttribute="bottom" constant="100" id="RJ8-Qq-ezs"/>
                             <constraint firstItem="ZCJ-Ga-T4e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="VZb-9n-4a6"/>
+                            <constraint firstItem="EBN-a4-qPm" firstAttribute="top" secondItem="e38-So-eAg" secondAttribute="bottom" constant="48.999999999999943" id="WuJ-gX-xcN"/>
                             <constraint firstItem="ZCJ-Ga-T4e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="crf-Sy-rZg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cGf-yC-0fe" secondAttribute="trailing" id="dWD-kW-HA8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EBN-a4-qPm" secondAttribute="trailing" id="eiM-wA-xBD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e38-So-eAg" secondAttribute="trailing" constant="20" id="fSL-la-qPK"/>
+                            <constraint firstItem="e38-So-eAg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fXT-t7-U9g"/>
                             <constraint firstItem="M4P-Ch-Gh8" firstAttribute="leading" secondItem="21a-33-wsC" secondAttribute="trailing" constant="50" id="hjX-0H-LPS"/>
                             <constraint firstItem="21a-33-wsC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ht5-Fs-I11"/>
                             <constraint firstItem="BXS-X4-0xC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lMe-NX-VsF"/>

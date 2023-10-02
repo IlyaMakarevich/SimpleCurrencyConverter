@@ -34,6 +34,8 @@ final class ViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
         
+        resultLabel.text = ""
+        
         pickerFrom.dataSource = self
         pickerTo.dataSource = self
         
@@ -70,18 +72,20 @@ final class ViewController: UIViewController {
         
         apiService.loadRates(base: currentlyPickedFromSymbol.code,
                              symbols: symbols) { [weak self] boolResult, result, timeInterval in
-            guard boolResult == true, let toSymbol = self?.currentlyPickedToSymbol.code else {
+            guard boolResult == true, let toValue = self?.currentlyPickedToSymbol, let fromValue = self?.currentlyPickedToSymbol else {
                 // handle error
                 return
             }
             
-            guard let toRate = result[toSymbol] else {
+            guard let toRate = result[toValue.code] else {
                 // handle error
                 return
             }
+            
+            let result = enteredValue + " " + fromValue.value + " equals to: " + String(toRate) + " " + toValue.value
             
             DispatchQueue.main.async {
-                self?.resultLabel.text = String(toRate)
+                self?.resultLabel.text = result
             }
         }
     }
