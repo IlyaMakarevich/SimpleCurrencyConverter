@@ -63,10 +63,14 @@ final class ViewController: UIViewController {
         dismissKeyboard()
         
 
-        guard let enteredValue = amountTextField.text else {
+        guard let enteredValue = amountTextField.text, !enteredValue.isEmpty else {
+            resultLabel.text = "Enter value"
             return
         }
-        let symbols = serverSymbols.map {
+        let filteredServerSymbols = serverSymbols.filter {
+            $0.code != currentlyPickedFromSymbol.code
+        }
+        let symbols = filteredServerSymbols.map {
             return $0.code
         }.joined(separator: ",")
         
@@ -78,7 +82,9 @@ final class ViewController: UIViewController {
             }
             
             guard let toRate = result[toValue.code] else {
-                // handle error
+                DispatchQueue.main.async {
+                    self?.resultLabel.text = "Select correct symbol"
+                }
                 return
             }
             
