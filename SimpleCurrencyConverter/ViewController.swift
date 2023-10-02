@@ -21,9 +21,13 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
 
     @IBAction private func convertButtonAction(_ sender: Any) {
+        dismissKeyboard()
     }
     
     @IBAction private func addToFavoritesAction(_ sender: Any) {
@@ -38,5 +42,8 @@ final class ViewController: UIViewController {
     @IBAction private func showFavoritesAction(_ sender: Any) {
     }
     
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
 
