@@ -72,7 +72,7 @@ final class ViewController: UIViewController {
         
         apiService.loadRates(base: currentlyPickedFromSymbol.code,
                              symbols: symbols) { [weak self] boolResult, result, timeInterval in
-            guard boolResult == true, let toValue = self?.currentlyPickedToSymbol, let fromValue = self?.currentlyPickedToSymbol else {
+            guard boolResult == true, let toValue = self?.currentlyPickedToSymbol, let fromValue = self?.currentlyPickedFromSymbol else {
                 // handle error
                 return
             }
